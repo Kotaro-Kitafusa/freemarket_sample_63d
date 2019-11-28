@@ -65,3 +65,5 @@
 
 server '3.115.205.148', user: 'ec2-user', roles: %w{app db web}
 
+#ブランチからデプロイするための設定
+set :branch, 'experimental/deploy'
