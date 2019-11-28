@@ -65,5 +65,5 @@
 
 server '3.115.205.148', user: 'ec2-user', roles: %w{app db web}
 
-#ブランチからデプロイするための設定:第二引数
+#ブランチからデプロイするための設定:第二引数で指定するのに注意！
 set :branch, 'experimental/deploy'
