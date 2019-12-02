@@ -1,0 +1,23 @@
+.mypage {
+  .main {
+    &__inner {
+      .user__registration {
+        width: 700px;
+        color: $mypage-black;
+        background-color: $mypage-white;
+        &__title {
+          padding: 8px 24px;
+          text-align: center;
+          font-size: 24px;
+          font-weight: bold;
+          border-bottom: 2px solid $mypage-bgcolor;
+        }
+        &__main {
+          padding: 64px;
+          font-size: 14px;
+          line-height: 21px;
+        }
+      }
+    }
+  }
+}

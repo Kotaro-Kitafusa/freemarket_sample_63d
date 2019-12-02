@@ -1,1 +1,20 @@
-hi
+= render "shared/header_navbar"
+.mypage
+  -# パンくず設定用
+  .breadcrumb-wrapper
+    .breadcrumb-inner
+      - breadcrumb :mypage
+      = breadcrumbs separator: " &rsaquo; "
+  .main
+    .main__inner
+      = render "user_accounts/mypage_sidebar"
+      .user__registration
+        .user__registration__title
+          本人情報の登録
+        .user__registration__main
+          お客さまの本人情報をご登録ください。
+          %br
+          登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
+        
+
+= render "shared/footer"
