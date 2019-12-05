@@ -1,4 +1,5 @@
-$(function() {
+var $;
+$(document).on("turbolinks:load", function() {
   $("#todo-tab").click(function(e) {
     e.preventDefault();
     $("#todo-tab").addClass("active");

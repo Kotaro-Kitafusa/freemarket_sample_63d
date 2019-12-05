@@ -1,0 +1,12 @@
+= render "shared/header_navbar"
+.mypage
+  .breadcrumb-wrapper
+    .breadcrumb-inner
+      - breadcrumb :mypage_card_registration
+      = breadcrumbs separator: " &rsaquo; "
+  .main
+    .main__inner
+      = render "user_accounts/mypage_sidebar"
+      = render "mypage_card_form"
+= render "shared/footer"
+= render partial: "tops/exibit_button"

@@ -1,0 +1,136 @@
+//haml,sass共に村上さんの担当ビューより部分的に引用
+
+h2.sell-container-head__confirm{
+  padding:16px;
+  font-size: 22px;
+  background: white;
+  text-align: center;
+  font-weight: bold;
+  width: 700px;
+  margin:0 auto;
+}
+.sell-content__confirm{
+  //内部の子要素を余白を設定し中央揃え
+  padding: 24px;
+  border-top: 1px solid #f5f5f5;
+  display: flex;
+  justify-content: center;
+  background: white;
+  width: 700px;
+  margin: 0 auto;
+  //画像サムネと説明文
+  .product-detail{
+    .thumbnail__container{
+        display: flex;
+        width: $c-320;
+      .img__thumbnail{
+        img{
+          width:64px;
+        }
+      }
+      h3.confirm__thumbnail{
+        margin-left: 16px;
+      }
+    }
+      //値段
+      p.buy__price{
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: $c-320;
+        .item__price{
+          margin-right: 8px;
+          font-size: 22px;
+        }
+      }
+      //ポイントの有無
+      .have__you__point{
+        margin-top: 10px;
+        width: $c-320;
+        height:48px;
+        background: #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      //警告文
+      p.buy__error{
+        width: $c-320;
+        color: $main-red;
+        text-align: center;
+        margin-top: 10px;
+      }
+      //最終的な値段
+      p.buy__price__result{
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .item__price{
+          font-size: 28px;
+        }
+      }
+      //購入するという表示箇所
+      .item__buying{
+        margin-top: 10px;
+        color:white;
+        width: $c-320;
+        height:48px;
+        background: #888;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      //熱いアプリ版推しキャプション
+      p.Proposal{
+        width: $c-320;
+        margin: 0 auto;
+        margin-top: 10px;
+      }
+      //iosかアンドロイドかの広告バナーダミー、あったりなかったり?
+      .store__banners{
+        margin-top: 10px;
+        width: $c-320;
+        justify-content: center;
+        display: flex;
+        a{
+          width:64px;
+          height:19px;
+          background: black;
+          display: block;
+          border-radius: 5px;
+          //最初の広告バナーにのみ右に余白
+          &:first-of-type{
+            margin:0px 5px 0px 0px;
+          }
+        }
+      }
+      //配送先と支払い方法見出し
+      h3.confirm__title{
+        display: block;
+        font-weight: bold;
+        font-size: 14px;
+        width: $c-320;
+      }
+      //配送先
+      .user__address{
+        width: $c-320;
+        height:30px;
+        margin-top: 10px;
+      }
+      //変更する
+      p.user__info{
+        text-align: right;
+        width: $c-320;
+        a{
+          color: $main-blue;
+          width: $c-320;
+          &:hover{
+            //デフォで消してるホバー時の下線を復活
+            text-decoration: underline;
+          }
+        }
+      }
+  }
+}

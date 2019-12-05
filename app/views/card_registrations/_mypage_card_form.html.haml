@@ -1,0 +1,45 @@
+.main__inner__body
+  .mypage__payment
+    .mypage__payment__title クレジットカード情報入力
+    .mypage__payment__card-registration
+      -# クレジットカード情報を収めるmodelを使うときには、以下のように書き換えてください。
+      -# @card = Card.new のようにコントローラーで設定した上で
+      -# = form_with(model: @card, class: "mypage__card__form") do |f|
+      = form_with(class: "mypage__card__form") do |f|
+        .mypage__card__form__card-num
+          .mypage__card__form__card-num__title
+            = f.label :card_number, "カード番号"
+            %span 必須
+          = f.text_field :card_number, placeholder: "半角数字のみ", maxlength: "16", class: "mypage__card__form__card-num__input"
+          %ul.mypage__card__form__card-num__logos
+            %li= image_tag 'credit_card/visa.svg', alt: 'visa', height: '20'
+            %li= image_tag 'credit_card/master-card.svg', alt: 'master', height: '20'
+            %li= image_tag 'credit_card/saison-card.svg', alt: 'saison', height: '20'
+            %li= image_tag 'credit_card/american_express.svg', alt: 'american_express', height: '20'
+            %li= image_tag 'credit_card/discover.svg', alt: 'discover', height: '20'
+            %li= image_tag 'credit_card/jcb.svg', alt: 'jcb', height: '20'
+            %li= image_tag 'credit_card/dinersclub.svg', alt: 'dinersclub', height: '20'
+        .mypage__card__form__expiration
+          .mypage__card__form__expiration__title
+            = f.label :exp_month, "有効期限"
+            %span 必須
+          .mypage__card__form__expiration__select
+            .mypage__card__form__expiration__select__item
+              = f.select :exp_month, ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
+              = icon("fas", "chevron-down")
+              %span 月
+            .mypage__card__form__expiration__select__item
+              = f.select :exp_year, [ [19, "2019"], [20, "2020"], [21, "2021"], [22, "2022"], [23, "2023"], [24, "2024"], [25, "2025"], [26, "2026"], [27, "2027"], [28, "2028"], [29, "2029"] ]
+              = icon("fas", "chevron-down")
+              %span 年
+        .mypage__card__form__security-code
+          .mypage__card__form__security-code__title
+            = f.label :security_code, "セキュリティコード"
+          = f.text_field :card_number, placeholder: "カード背面4桁もしくは3桁の番号", maxlength: "4", class: "mypage__card__form__security-code__input"
+          .mypage__card__form__security-code__about
+            = icon("fas", "question-circle")
+            %span カード裏面の番号とは？
+            .mypage__card__form__security-code__about__tool-tip
+              %span カードの裏面をご参照ください。
+              = image_tag 'credit_card/creditcard_back.png', alt: 'creditcard_back', width: '240'
+        = f.submit "追加する", class: "mypage__card__form__submit-button"

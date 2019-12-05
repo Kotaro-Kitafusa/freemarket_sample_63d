@@ -1,0 +1,15 @@
+.mypage__logout__container{
+  padding: 64px;
+  background: white;
+  a.logout__button{
+    margin: 0 auto;
+    background-color: $main-red;
+    text-decoration: none;
+    display: block;
+    width: 320px;
+    line-height: 48px;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,49 @@
+.mypage {
+  .mypage__payment {
+    background-color: $mypage-white;
+    &__title {
+      text-align: center;
+      font-size: 24px;
+      padding: 8px 0;
+      border-bottom: 1px solid $mypage-bgcolor;
+      font-weight: bold;
+    }
+    &__container {
+      padding: 64px;
+      &__card-list {
+        &__title {
+          max-width: 320px;
+          margin: 0 auto;
+          font-weight: bold;
+        }
+        &__add-card {
+          padding: 24px;
+          border-bottom: 1px solid $mypage-bgcolor;
+          &__button {
+            margin: 0 auto;
+            background-color: $mypage-red;
+            text-decoration: none;
+            display: block;
+            width: 320px;
+            line-height: $mypage-card-form-input-height;
+            color: $mypage-white;
+            text-align: center;
+            font-size: $mypage-font-size;
+          }
+        }
+        &__about {
+          margin-top: 40px;
+          text-align: right;
+          font-size: $mypage-font-size;
+          a {
+            color: $mypage-ultramarine;
+            text-decoration: none;
+          }
+          &:hover {
+            text-decoration: underline $mypage-ultramarine;
+          }
+        }
+      }
+    }
+  }
+}

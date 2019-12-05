@@ -7,6 +7,21 @@ crumb :mypage do
   link "マイページ", user_accounts_path
 end
 
+crumb :mypage_payment do
+  link "お支払い方法", card_registrations_path
+  parent :mypage
+end
+
+crumb :mypage_card_registration do
+  link "クレジットカード情報入力", new_card_registration_path
+  parent :mypage_payment
+end
+
+crumb :logout do
+  link "ログアウト", edit_top_path
+  parent :mypage
+end
+
 # crumb :projects do
 #   link "Projects", projects_path
 # end

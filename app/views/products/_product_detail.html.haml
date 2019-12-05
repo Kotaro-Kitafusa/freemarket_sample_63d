@@ -1,0 +1,301 @@
+.product-detail__wrapper
+  .product-detail__content
+    %h1.product-detail__content__title 腕時計
+    .product-detail__content__main
+      .product-detail__content__main__photo
+        %ul.product-detail__content__main__photo__slide-show
+          %li= image_tag 'products_temporary/food_curryrice_white.png', alt: 'food_curryrice_white', height: '300', width: '300'
+          %li= image_tag 'products_temporary/food_gyouza_enban.png', alt: 'food_curryrice_white', height: '300', width: '300'
+          %li= image_tag 'products_temporary/food_nasu_nibitashi.png', alt: 'food_curryrice_white', height: '300', width: '300'
+          %li= image_tag 'products_temporary/food_nasu_yakinasu.png', alt: 'food_curryrice_white', height: '300', width: '300'
+          %li= image_tag 'products_temporary/food_sauce_katsudon_fukui.png', alt: 'food_curryrice_white', height: '300', width: '300'
+        %ul.product-detail__content__main__photo__thumbnails
+          %li= image_tag 'products_temporary/food_curryrice_white.png', alt: 'food_curryrice_white', height: '60', width: '60'
+          %li= image_tag 'products_temporary/food_gyouza_enban.png', alt: 'food_curryrice_white', height: '60', width: '60'
+          %li= image_tag 'products_temporary/food_nasu_nibitashi.png', alt: 'food_curryrice_white', height: '60', width: '60'
+          %li= image_tag 'products_temporary/food_nasu_yakinasu.png', alt: 'food_curryrice_white', height: '60', width: '60'
+          %li= image_tag 'products_temporary/food_sauce_katsudon_fukui.png', alt: 'food_curryrice_white', height: '60', width: '60'
+      .product-detail__content__main__details
+        %table.product-detail__table
+          %tbody.product-detail__table__tbody
+            %tr.product-detail__table__tbody__row
+              %th.product-detail__table__tbody__row__title 出品者
+              %td.product-detail__table__tbody__row__content
+                = link_to "山田", "#"
+                %ul.product-detail__user-rating
+                  %li.product-detail__user-rating__item
+                    = icon("fas", "smile", class: "product-detail__user-rating__item__rate--good")
+                    %span 101
+                  %li.product-detail__user-rating__item
+                    = icon("fas", "meh", class: "product-detail__user-rating__item__rate--normal")
+                    %span 56
+                  %li.product-detail__user-rating__item
+                    = icon("fas", "frown", class: "product-detail__user-rating__item__rate--bad")
+                    %span 17
+            %tr.product-detail__table__tbody__row
+              %th.product-detail__table__tbody__row__title カテゴリー
+              %td.product-detail__table__tbody__row__content
+                %ul.product-detail__category
+                  %li.product-detail__category__item
+                    = link_to "#" do
+                      %span メンズ
+                  %li.product-detail__category__item
+                    = link_to "#" do
+                      = icon("fas", "chevron-right")
+                      %span 時計
+                  %li.product-detail__category__item
+                    = link_to "#" do
+                      = icon("fas", "chevron-right")
+                      %span 腕時計
+            %tr.product-detail__table__tbody__row
+              %th.product-detail__table__tbody__row__title ブランド
+              %td.product-detail__table__tbody__row__content
+                = link_to "シャネル", "#"
+            %tr.product-detail__table__tbody__row
+              %th.product-detail__table__tbody__row__title 商品の状態
+              %td.product-detail__table__tbody__row__content 目立った汚れや傷なし
+            %tr.product-detail__table__tbody__row
+              %th.product-detail__table__tbody__row__title 配送料の負担
+              %td.product-detail__table__tbody__row__content 送料込み
+            %tr.product-detail__table__tbody__row
+              %th.product-detail__table__tbody__row__title 配送の方法
+              %td.product-detail__table__tbody__row__content らくらくメルカリ便
+            %tr.product-detail__table__tbody__row
+              %th.product-detail__table__tbody__row__title 配送元地域
+              %td.product-detail__table__tbody__row__content
+                = link_to "千葉県", "#"
+            %tr.product-detail__table__tbody__row
+              %th.product-detail__table__tbody__row__title 発送日の目安
+              %td.product-detail__table__tbody__row__content 1~2日で発送
+    .product-detail__content__price-box
+      %span.product-detail__content__price-box__price &yen;9,500
+      %span.product-detail__content__price-box__tax (税込み)
+      %span.product-detail__content__price-box__shipping-fee 送料込み
+    .product-detail__content__buy
+      = link_to "購入画面に進む", "#"
+    .product-detail__content__description
+      %p.product-detail__content__description__inner 【商品名】 ナイキ ビッグスウォッシュ スウェットパンツ 【商品状態】 新品・未使用品 【color】 ブラック 【size】 M 【ウエスト ヒップ   股上    股下  もも周り すそ周り】 (76)        (93)    (33)   (67.5)   (59)        (25) ※ あくまで自宅保管の為USED品に ご理解頂ける方のご入札でお願い致します。
+    .product-detail__content__buttons
+      .product-detail__content__buttons__left
+        .product-detail__content__buttons__left__item
+          = link_to "#" do
+            = icon("far", "heart")
+            %span いいね
+            %span 12
+        .product-detail__content__buttons__left__item
+          = link_to "#" do
+            = icon("far", "flag")
+            %span 不適切な商品の報告
+      .product-detail__content__buttons__right
+        .product-detail__content__buttons__right__item
+          = link_to "#" do
+            = icon("fas", "lock")
+            %span 安心・安全への取り組み
+  .product-detail__message
+    %ul.product-detail__message__comments
+      %li.product-detail__message__comments__item
+        .product-detail__message__comments__item__icon
+          = link_to "#", class: "product-detail__message__comments__item__icon__link" do
+            = image_tag 'mypage/boy_01.png', alt: 'boy_01', height: '40', width: '40'
+        .product-detail__message__comments__item__main
+          .product-detail__message__comments__item__main__user-name 山田
+          .product-detail__message__comments__item__main__content
+            .product-detail__message__comments__item__main__content__text
+              %span コメント失礼します。値引きする予定ありますか。
+            .product-detail__message__comments__item__main__content__date
+              = icon("far", "clock")
+              %span 10時間前
+      %li.product-detail__message__comments__item
+        .product-detail__message__comments__item__icon
+          = link_to "#", class: "product-detail__message__comments__item__icon__link" do
+            = image_tag 'mypage/boy_01.png', alt: 'boy_01', height: '40', width: '40'
+            .product-detail__message__comments__item__icon__link__seller 出品者
+        .product-detail__message__comments__item__main
+          .product-detail__message__comments__item__main__user-name 佐藤
+          .product-detail__message__comments__item__main__content
+            .product-detail__message__comments__item__main__content__text
+              %span 値引きの予定はありません。
+            .product-detail__message__comments__item__main__content__date
+              = icon("far", "clock")
+              %span 8時間前
+    .product-detail__message__post
+      .product-detail__message__post__notice
+        %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+      = form_with(class: "product-detail__message__post__form") do |f|
+        = f.text_area :comment, rows: 4, class: "product-detail__message__post__form__text-area"
+        = f.submit "コメントする", class: "product-detail__message__post__form__submit"
+  %ul.product-detail__nav-prev-next
+    %li.product-detail__nav-prev-next__prev
+      = link_to "#" do
+        = icon("fas", "chevron-left")
+        %span kindle fire 8インチ
+    %li.product-detail__nav-prev-next__next
+      = link_to "#" do
+        %span iphoneX 新品
+        = icon("fas", "chevron-right")
+  .product-detail__social-media
+    %ul.product-detail__social-media__icons
+      %li.product-detail__social-media__icons__item
+        = link_to "#" do
+          = icon("fab", "facebook-square", class: "social-media-facebook")
+      %li.product-detail__social-media__icons__item
+        = link_to "#" do
+          = icon("fab", "twitter", class: "social-media-twitter")
+      %li.product-detail__social-media__icons__item
+        = link_to "#" do
+          = icon("fab", "line", class: "social-media-line")
+      %li.product-detail__social-media__icons__item
+        = link_to "#" do
+          = icon("fab", "pinterest", class: "social-media-pinterest")
+  .product-detail__items.product-detail__seller-items
+    %h2.product-detail__items__title
+      = link_to "山田さんのその他の出品物", "#"
+    %ul.product-detail__items__box
+      %li.product-detail__items__box__item
+        = link_to "#", class: "product-detail__items__box__item__detail" do
+          = image_tag 'products_temporary/food_curryrice_white.png', alt: '', height: '220', width: '220'
+          .product-detail__items__box__item__detail__desc
+            .product-detail__items__box__item__detail__desc__name
+              %span カレーライス
+            .product-detail__items__box__item__detail__desc__status
+              .product-detail__items__box__item__detail__desc__status__price
+                %span &yen;600
+              .product-detail__items__box__item__detail__desc__status__like
+                = icon("far", "heart")
+                %span 3
+      %li.product-detail__items__box__item
+        = link_to "#", class: "product-detail__items__box__item__detail" do
+          = image_tag 'products_temporary/food_gyouza_enban.png', alt: '', height: '220', width: '220'
+          .product-detail__items__box__item__detail__desc
+            .product-detail__items__box__item__detail__desc__name
+              %span ギョウザ
+            .product-detail__items__box__item__detail__desc__status
+              .product-detail__items__box__item__detail__desc__status__price
+                %span &yen;500
+              .product-detail__items__box__item__detail__desc__status__like
+                = icon("far", "heart")
+                %span 3
+      %li.product-detail__items__box__item
+        = link_to "#", class: "product-detail__items__box__item__detail" do
+          = image_tag 'products_temporary/food_nasu_nibitashi.png', alt: '', height: '220', width: '220'
+          .product-detail__items__box__item__detail__desc
+            .product-detail__items__box__item__detail__desc__name
+              %span おひたし
+            .product-detail__items__box__item__detail__desc__status
+              .product-detail__items__box__item__detail__desc__status__price
+                %span &yen;700
+              .product-detail__items__box__item__detail__desc__status__like
+                = icon("far", "heart")
+                %span 3
+      %li.product-detail__items__box__item
+        = link_to "#", class: "product-detail__items__box__item__detail" do
+          = image_tag 'products_temporary/food_nasu_yakinasu.png', alt: '', height: '220', width: '220'
+          .product-detail__items__box__item__detail__desc
+            .product-detail__items__box__item__detail__desc__name
+              %span 焼き茄子
+            .product-detail__items__box__item__detail__desc__status
+              .product-detail__items__box__item__detail__desc__status__price
+                %span &yen;800
+              .product-detail__items__box__item__detail__desc__status__like
+                = icon("far", "heart")
+                %span 3
+      %li.product-detail__items__box__item
+        = link_to "#", class: "product-detail__items__box__item__detail" do
+          = image_tag 'products_temporary/food_sauce_katsudon_fukui.png', alt: '', height: '220', width: '220'
+          .product-detail__items__box__item__detail__desc
+            .product-detail__items__box__item__detail__desc__name
+              %span カツ丼
+            .product-detail__items__box__item__detail__desc__status
+              .product-detail__items__box__item__detail__desc__status__price
+                %span &yen;1000
+              .product-detail__items__box__item__detail__desc__status__like
+                = icon("far", "heart")
+                %span 3
+      %li.product-detail__items__box__item
+        = link_to "#", class: "product-detail__items__box__item__detail" do
+          = image_tag 'products_temporary/food_soup_okuzukake.png', alt: '', height: '220', width: '220'
+          .product-detail__items__box__item__detail__desc
+            .product-detail__items__box__item__detail__desc__name
+              %span スープ
+            .product-detail__items__box__item__detail__desc__status
+              .product-detail__items__box__item__detail__desc__status__price
+                %span &yen;600
+              .product-detail__items__box__item__detail__desc__status__like
+                = icon("far", "heart")
+                %span 3
+  .product-detail__items.product-detail__related-items
+    %h2.product-detail__items__title
+      = link_to "メンズ腕時計のその他の商品", "#"
+    %ul.product-detail__items__box
+      %li.product-detail__items__box__item
+        = link_to "#", class: "product-detail__items__box__item__detail" do
+          = image_tag 'products_temporary/food_curryrice_white.png', alt: '', height: '220', width: '220'
+          .product-detail__items__box__item__detail__desc
+            .product-detail__items__box__item__detail__desc__name
+              %span カレーライス
+            .product-detail__items__box__item__detail__desc__status
+              .product-detail__items__box__item__detail__desc__status__price
+                %span &yen;600
+              .product-detail__items__box__item__detail__desc__status__like
+                = icon("far", "heart")
+                %span 3
+      %li.product-detail__items__box__item
+        = link_to "#", class: "product-detail__items__box__item__detail" do
+          = image_tag 'products_temporary/food_gyouza_enban.png', alt: '', height: '220', width: '220'
+          .product-detail__items__box__item__detail__desc
+            .product-detail__items__box__item__detail__desc__name
+              %span ギョウザ
+            .product-detail__items__box__item__detail__desc__status
+              .product-detail__items__box__item__detail__desc__status__price
+                %span &yen;500
+              .product-detail__items__box__item__detail__desc__status__like
+                = icon("far", "heart")
+                %span 3
+      %li.product-detail__items__box__item
+        = link_to "#", class: "product-detail__items__box__item__detail" do
+          = image_tag 'products_temporary/food_nasu_nibitashi.png', alt: '', height: '220', width: '220'
+          .product-detail__items__box__item__detail__desc
+            .product-detail__items__box__item__detail__desc__name
+              %span おひたし
+            .product-detail__items__box__item__detail__desc__status
+              .product-detail__items__box__item__detail__desc__status__price
+                %span &yen;700
+              .product-detail__items__box__item__detail__desc__status__like
+                = icon("far", "heart")
+                %span 3
+      %li.product-detail__items__box__item
+        = link_to "#", class: "product-detail__items__box__item__detail" do
+          = image_tag 'products_temporary/food_nasu_yakinasu.png', alt: '', height: '220', width: '220'
+          .product-detail__items__box__item__detail__desc
+            .product-detail__items__box__item__detail__desc__name
+              %span 焼き茄子
+            .product-detail__items__box__item__detail__desc__status
+              .product-detail__items__box__item__detail__desc__status__price
+                %span &yen;800
+              .product-detail__items__box__item__detail__desc__status__like
+                = icon("far", "heart")
+                %span 3
+      %li.product-detail__items__box__item
+        = link_to "#", class: "product-detail__items__box__item__detail" do
+          = image_tag 'products_temporary/food_sauce_katsudon_fukui.png', alt: '', height: '220', width: '220'
+          .product-detail__items__box__item__detail__desc
+            .product-detail__items__box__item__detail__desc__name
+              %span カツ丼
+            .product-detail__items__box__item__detail__desc__status
+              .product-detail__items__box__item__detail__desc__status__price
+                %span &yen;1000
+              .product-detail__items__box__item__detail__desc__status__like
+                = icon("far", "heart")
+                %span 3
+      %li.product-detail__items__box__item
+        = link_to "#", class: "product-detail__items__box__item__detail" do
+          = image_tag 'products_temporary/food_soup_okuzukake.png', alt: '', height: '220', width: '220'
+          .product-detail__items__box__item__detail__desc
+            .product-detail__items__box__item__detail__desc__name
+              %span スープ
+            .product-detail__items__box__item__detail__desc__status
+              .product-detail__items__box__item__detail__desc__status__price
+                %span &yen;600
+              .product-detail__items__box__item__detail__desc__status__like
+                = icon("far", "heart")
+                %span 3

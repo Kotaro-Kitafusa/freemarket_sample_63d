@@ -1,0 +1,14 @@
+.main__inner__body
+  .mypage__payment
+    .mypage__payment__title 支払い方法
+    .mypage__payment__container
+      .mypage__payment__container__card-list
+        .mypage__payment__container__card-list__title クレジットカード一覧
+        .mypage__payment__container__card-list__add-card
+          = link_to new_card_registration_path, class: "mypage__payment__container__card-list__add-card__button" do
+            = icon("far", "credit-card")
+            %span カードを追加する
+        .mypage__payment__container__card-list__about
+          = link_to "#" do
+            %span お支払い方法について
+            = icon("fas", "chevron-right")

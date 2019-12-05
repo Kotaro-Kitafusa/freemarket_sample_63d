@@ -31,10 +31,10 @@
             align-items: center;
             justify-content: space-between;
             i {
-              color: $mypage-tab-dimgray;
+              color: $mypage-dimgray;
             }
             &:hover {
-              background-color: $mypage-hover-dimwhite;
+              background-color: $mypage-dimwhite;
               & i {
                 transform: translateX(50%);
                 transition-duration: 0.3s;
@@ -100,7 +100,7 @@
               }
               &.active {
                 background-color: $mypage-white;
-                border-top: 2px solid $mypage-active-tab-red;
+                border-top: 2px solid $mypage-red;
               }
             }
           }
@@ -114,7 +114,7 @@
                 justify-content: space-between;
                 padding: 16px;
                 &:hover {
-                  background-color: $mypage-hover-dimwhite;
+                  background-color: $mypage-dimwhite;
                 }
                 &__content {
                   flex-grow: 1;
@@ -136,7 +136,7 @@
                   line-height: 56px;
                   text-align: center;
                   &:hover {
-                    background-color: $mypage-hover-dimwhite;
+                    background-color: $mypage-dimwhite;
                   }
                 }
               }
@@ -150,7 +150,7 @@
           margin-top: 40px;
           background-color: $mypage-white;
           &__title {
-            background-color: $mypage-hover-dimwhite;
+            background-color: $mypage-dimwhite;
             line-height: 72px;
             padding: 0 16px;
           }
@@ -168,7 +168,7 @@
               }
               &.active {
                 background-color: $mypage-white;
-                border-top: 2px solid $mypage-active-tab-red;
+                border-top: 2px solid $mypage-red;
               }
             }
           }

@@ -24,3 +24,12 @@
   text-align: center;
   color:$main-black;
 }
+
+//clearfix
+@mixin clearfix() {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}

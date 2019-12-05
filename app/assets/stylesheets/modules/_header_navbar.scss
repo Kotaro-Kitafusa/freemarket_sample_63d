@@ -16,7 +16,7 @@
         display: flex;
         align-items: center;
         background-color: $mypage-bgcolor;
-        border: 1px solid $mypage-tab-dimgray;
+        border: 1px solid $mypage-dimgray;
         border-radius: 4px;
         &__input {
           background-color: rgba(255, 255, 255, 0);
@@ -52,7 +52,7 @@
             line-height: 44px;
             font-weight: 700;
             i {
-              color: #ea352d;
+              color: $mypage-red;
             }
           }
         }
@@ -74,7 +74,7 @@
             align-items: center;
             i {
               font-size: 18px;
-              color: $mypage-tab-dimgray;
+              color: $mypage-dimgray;
             }
             span {
               margin-left: 10px;
