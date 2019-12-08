@@ -64,6 +64,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'haml-rails'
 gem 'erb2haml'
 gem 'font-awesome-rails'
+gem 'ancestry'
+gem "jquery-rails"
+gem 'jp_prefecture'
 
 #####################################
 ####### Unicornを本番環境に追加 ########
