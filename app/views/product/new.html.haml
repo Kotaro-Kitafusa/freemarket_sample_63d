@@ -1,0 +1,131 @@
+.exhibit-top
+  =render 'single/single-header'
+
+.exhibit
+  %main.main
+    %section.section__container.product-container
+      = form_for (@product), url: product_index_url do |f|
+        .sell-upload-box
+          .sell-container
+            %h2.sell-container-head 商品の情報の入力
+        .sell-all-contents
+          .sell-upload
+            .form-group
+              %h3.sell-upload__head
+                出品画像
+                %span.form-require 必須
+              %p.sell-upload__max-10 最大10枚までアップロードできます
+              = f.fields_for :product_images do |image|
+                .sell-upload__conteiner
+                  #preview
+                  .sell-upload__drop-area
+                    = image.label :image, class: 'drop-box' do
+                      .input_area
+                        = image.file_field :image, multiple: true, name: 'product_images[image][]', id:'upload-iamge', class: 'upload-image','data-image': 0
+                      %p ここをクリックしてください
+                  #preview2
+                  .sell-upload__drop-area2
+                    = image.label :image, class: "drop-box", for: "upload-image" do
+                      %p ここをクリックしてください
+            %ul.has-error-text 画像がありません
+          .sell-content
+            .product-detail
+              .form-group
+                %label
+                  商品名
+                  %span.form-require 必須
+                %div
+                = f.text_field :name, class: 'input-default', placeholder: '商品名(必須 40文字まで)'
+                %ul.has-error-text 入力してください
+              .form-group
+                %label
+                  商品の説明
+                  %span.form-require 必須
+                = f.text_area :description, class: 'textarea-default', placeholder: '商品の説明(必須 1,000文字以内)(色、素材、重さ、定価、注意点など)例)       2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。', rows: '5'
+                %ul.has-error-text 入力してください
+
+          .sell-content
+            .sell-content__head
+              %h3.sell-sub-head 商品の詳細
+              .sell-form-box
+            .sell-form-box
+              .form-group.category-select
+                %label
+                  カテゴリー
+                  %span.form-require 必須
+                .category
+                  .select-wrap
+                    = f.select :category, @category_parent_array, {}, {class: 'select-wrap__pulldown', id: 'parent_category'}
+                    -# %ul.has-error-text 選択してください
+              .form-group.bland_group
+                %label
+                  ブランド
+                  %span.form-arbitrary 任意
+              = f.text_field :brand_id, placeholder: "例) シャネル",autocomplete: 'off',value: "", class: "input-default", id: "brand_search"
+              .form-group
+                %label
+                  商品の状態
+                  %span.form-require 必須
+                .select-wrap
+                  = f.select :status, Product.statuses, {prompt: '---'}, {class: 'select-wrap__pulldown'}
+                  %ul.has-error-text 選択してください
+          .sell-content
+            .sell-content__head
+              %h3.sell-sub-head 配送について
+              %figure.form-question ?
+            .sell-form-box
+              .form-group.way_of_shipping
+                %label
+                  配送料の負担
+                  %span.form-require 必須
+                .select-wrap
+                  = f.select :who_charge_shipping, Product.who_charge_shippings, {prompt: '---'}, {class: 'select-wrap__pulldown', id: 'shipping-method'}
+                  %ul.has-error-text 選択してください
+
+              .form-group
+                %label
+                  発送元の地域
+                  %span.form-require 必須
+                .select-wrap
+                  = f.select :shipping_region, Product.shipping_regions, {prompt: '---'}, {class: 'select-wrap__pulldown'}
+                  %ul.has-error-text 選択してください
+              .form-group
+                %label
+                  発送までの日数
+                  %span.form-require 必須
+                .select-wrap
+                  = f.select :how_long_shipping, Product.how_long_shippings, {prompt: '---'}, {class: 'select-wrap__pulldown'}
+                  %ul.has-error-text 選択してください
+
+          .sell-content.product-prices
+            .sell-content__head
+              %h3.sell-sub-head 販売価格(300~9,999,999)
+              %figure.form-question ?
+            .sell-form-box
+              %ul.product-price
+                %li.form-group.form-group-price
+                  %label.l-left.price-label
+                    価格
+                    %span.form-require 必須
+                  .l-right.product-price-input
+                    %p.price-mark ¥
+                    = f.text_field :price, class: 'input-price', id: 'input-price', value: @product.price, placeholder: '例) 300'
+                %ul.has-error-text 入力してください
+                .clearfix-commission.form-group
+                  .l-left 販売手数料（10%）
+                  .l-right.l-right-commission.commission -
+                .bold.form-group-price.profit
+                  .l-left.gain 販売利益
+                  = f.label '-', class: 'l-right total-right profits'
+
+        .sell-content
+          .sell-button-box
+            = f.submit '出品する', class: 'button-exhibit button-red',data: { disable_with: "送信中..." }
+            .button-exhibit.button-gray
+            -# = link_to "もどる", root_path, class: ".button-exhibit.button-gray"
+
+        .exhibit-attention
+          =render 'exhibit-attention'
+
+.exhibit-bottom
+  =render 'single/single-footer'
