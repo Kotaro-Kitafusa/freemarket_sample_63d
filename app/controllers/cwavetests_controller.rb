@@ -9,7 +9,7 @@ class CwavetestsController < ApplicationController
   end
 
   def new
-   @cwavetest = Cwavetest.new
+  @cwavetest = Cwavetest.new
   end
 
   private
