@@ -9,7 +9,12 @@ Rails.application.routes.draw do
     end
   end
   resources :card_registrations, only: [:index, :new], path: "/mypage/card"
-  resources :signup, only: [:new, :create]
+  resources :signup, only: [:new, :create] do
+    collection do
+      get :step1
+    end
+
+  end
 
   resources :products, only: [:show, :new, :create, :edit, :update, :destroy] do
     collection do

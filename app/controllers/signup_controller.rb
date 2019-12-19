@@ -2,10 +2,10 @@ class SignupController < ApplicationController
   protect_from_forgery
 
   #今後セッションを設定する場合に使う為残しておきます。
-    # def step1
-    #   @user = User.new
-    #   @user.build_user_profile
-    # end
+    def step1
+      @user = User.new
+      @user.build_user_profile
+    end
 
   def new
     @user = User.new
