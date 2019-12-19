@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_18_021239) do
+ActiveRecord::Schema.define(version: 2019_12_19_115710) do
 
   create_table "bought_products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "product_id"
@@ -105,7 +105,6 @@ ActiveRecord::Schema.define(version: 2019_12_18_021239) do
   end
 
   create_table "user_addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_profile_id"
     t.string "first_name", null: false
     t.string "last_name", null: false
     t.string "first_name_kana", null: false
@@ -118,7 +117,8 @@ ActiveRecord::Schema.define(version: 2019_12_18_021239) do
     t.integer "phone_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_profile_id"], name: "index_user_addresses_on_user_profile_id"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_user_addresses_on_user_id"
   end
 
   create_table "user_profiles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -162,6 +162,6 @@ ActiveRecord::Schema.define(version: 2019_12_18_021239) do
   add_foreign_key "sold_products", "products"
   add_foreign_key "sold_products", "user_profiles"
   add_foreign_key "sold_products", "user_profiles", column: "buyer_id"
-  add_foreign_key "user_addresses", "user_profiles"
+  add_foreign_key "user_addresses", "users"
   add_foreign_key "user_profiles", "users"
 end

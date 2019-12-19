@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_one :user_profile
+  has_one :user_address
   with_options presence: true do
   validates :first_name
     validates :last_name
@@ -14,4 +15,5 @@ class User < ApplicationRecord
   end
   #ユーザー登録時に複数のテーブルに保存できるように親=>子へネストさせる
   accepts_nested_attributes_for :user_profile
+  accepts_nested_attributes_for :user_address
 end
