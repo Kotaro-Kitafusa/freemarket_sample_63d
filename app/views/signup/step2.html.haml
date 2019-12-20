@@ -1,0 +1,15 @@
+=render 'single/single-header'
+.registration__page__wrapper
+  .registration__page__wrapper__container
+    %h2.registration__page__wrapper__container__page__title
+      電話番号の認証
+    .registration__page__wrapper__container__form__group
+      = form_for @user, url: step3_signup_index_path, method: :get do |f|
+        %p.registration__label
+          %label
+            電話番号
+          %span.registration__card
+            必須
+        .registration__input__wrapper
+          = f.text_field :phone_number, autocomplete: "phone_number", placeholder: '例）09012345678', class: 'registration__input'
+          = f.submit "次へ進む", class: "registration__push__next"

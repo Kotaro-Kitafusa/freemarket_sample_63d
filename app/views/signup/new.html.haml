@@ -63,5 +63,5 @@
           %span.registration__card
             必須
         .registration__input__wrapper
-          != sprintf(f.date_select(:birth_day, start_year:Time.now.year, end_year:1920, use_month_numbers:true, prompt:"---", date_separator:'%s'), '年', '月')+'月'
+          != sprintf(f.date_select(:birth_day, prefix:'birth_day', start_year:Time.now.year, end_year:1920, use_month_numbers:true, prompt:"---", date_separator:'%s'), '年', '月')+'月'
           = f.submit "登録", class: "registration__push__next"

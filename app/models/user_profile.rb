@@ -1,7 +1,6 @@
 class UserProfile < ApplicationRecord
   validates :nickname, presence: true
   belongs_to :user
-  has_one :user_address
   has_many :products
   has_many :comments, dependent: :destroy
   has_many :saling_products
