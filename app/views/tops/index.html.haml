@@ -1,11 +1,12 @@
 %header
   = render "shared/header_navbar"
 
-  .slider
-    = link_to do
-      %i.fas.fa-angle-left
-    = link_to do
-      %i.fas.fa-angle-right
+  %ul.top__fade
+    %li
+      %img{src: "/assets/toppage/top-page-banner.jpg"}
+    %li
+      %img{src: "/assets/toppage/top-page-banner-two.jpg"}
+    
 
   .popularity
     %h2 人気のカテゴリー
